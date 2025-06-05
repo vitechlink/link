@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate high-converting short links with Viral Link. Create, track, and monetize your links instantly.">
+    <meta name="keywords" content="viral link, url shortener, link shortener, free link tool, ad monetization">
+    <meta name="author" content="Viral Link">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Viral Link Generator | Create Short Links Instantly">
+    <meta property="og:description" content="Generate high-converting short links for social media, ads, and marketing campaigns.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/generator">
+    <meta property="og:image" content="https://yourwebsite.com/images/viral-link-generator.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Viral Link Generator | Create Short Links Instantly</title>
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #ff6b4a;
+            --accent-color: #ffd04a;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        /* Link Generator Section */
+        .generator-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .get-link-btn {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 208, 74, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 2rem auto;
+            width: fit-content;
+        }
+        
+        .get-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 208, 74, 0.6);
+        }
+        
+        /* Result Container */
+        .result-container {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        /* Ad Containers */
+        .ad-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #ddd;
+        }
+        
+        /* Features Section */
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .generator-container {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-link me-2"></i> Viral Link
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="generator.html">Link Generator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Viral Link Generator</h1>
+            <p class="lead mb-4">Create short, memorable links that boost your click-through rates</p>
+        </div>
+    </section>
+
+    <!-- Top Ad Banner -->
+    <div class="container">
+        <div class="ad-container">
+            <!-- Google AdMob Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+            <!-- Generator Top Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                 data-ad-slot="YOUR_AD_UNIT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Link Generator Section -->
+    <div class="container">
+        <div class="generator-container">
+            <h2 class="text-center mb-4"><i class="fas fa-magic me-2"></i> Create Your Viral Link</h2>
+            <p class="text-center mb-4">Paste your long URL below to generate a short, trackable link</p>
+            
+            <div class="text-center">
+                <button id="generateBtn" class="get-link-btn">
+                    <i class="fas fa-link me-2"></i> Get Link Now
+                </button>
+            </div>
+            
+            <div class="result-container" id="resultContainer">
+                <h4 class="mb-3">Your Viral Link:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="generatedLink" readonly value="https://viral.link/xyz123">
+                    <button class="btn btn-outline-secondary" type="button" id="copyBtn">
+                        <i class="fas fa-copy me-1"></i> Copy
+                    </button>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <a href="#" class="btn btn-sm btn-outline-primary mb-2" id="testLink">
+                        <i class="fas fa-external-link-alt me-1"></i> Test Link
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-success mb-2" id="shareLink">
+                        <i class="fas fa-share-alt me-1"></i> Share
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-info mb-2" id="qrCodeBtn">
+                        <i class="fas fa-qrcode me-1"></i> QR Code
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-dark mb-2" id="analyticsBtn">
+                        <i class="fas fa-chart-bar me-1"></i> Analytics
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Ad Banner -->
+    <div class="container">
+        <div class="ad-container">
+            <!-- Google AdMob Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+            <!-- Generator Middle Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                 data-ad-slot="YOUR_SECOND_AD_UNIT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Advanced Link Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Track clicks, geographic locations, devices, and referral sources for every link you create.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Link Expiration</h3>
+                        <p>Set expiration dates for your links or limit the number of clicks they can receive.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Monetization</h3>
+                        <p>Earn money from your links with our built-in advertising platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Ad Banner -->
+    <div class="container">
+        <div class="ad-container">
+            <!-- Google AdMob Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+            <!-- Generator Bottom Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                 data-ad-slot="YOUR_THIRD_AD_UNIT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-link me-2"></i> Viral Link</h5>
+                    <p>The fastest way to create, track, and monetize short links.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="generator.html">Link Generator</a>
+                        <a href="#features">Features</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Viral Link. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS & Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generateBtn');
+            const resultContainer = document.getElementById('resultContainer');
+            const generatedLink = document.getElementById('generatedLink');
+            const copyBtn = document.getElementById('copyBtn');
+            const testLink = document.getElementById('testLink');
+            const shareLink = document.getElementById('shareLink');
+            const qrCodeBtn = document.getElementById('qrCodeBtn');
+            const analyticsBtn = document.getElementById('analyticsBtn');
+            
+            // Generate Link Button Click Handler
+            generateBtn.addEventListener('click', function() {
+                const longUrl = prompt("Please enter your long URL to shorten:");
+                
+                if (longUrl) {
+                    // In a real implementation, this would call your backend API
+                    const shortCode = Math.random().toString(36).substring(2, 8);
+                    const shortUrl = `https://viral.link/${shortCode}`;
+                    
+                    generatedLink.value = shortUrl;
+                    resultContainer.style.display = 'block';
+                    testLink.href = shortUrl;
+                    
+                    // Scroll to results
+                    resultContainer.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            
+            // Copy Button Click Handler
+            copyBtn.addEventListener('click', function() {
+                generatedLink.select();
+                document.execCommand('copy');
+                
+                // Change button text temporarily
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check me-1"></i> Copied!';
+                
+                setTimeout(function() {
+                    copyBtn.innerHTML = originalText;
+                }, 2000);
+            });
+            
+            // Share Button Click Handler
+            shareLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'My Viral Link',
+                        text: 'Check out this short link I created with Viral Link',
+                        url: generatedLink.value
+                    }).catch(err => {
+                        console.log('Error sharing:', err);
+                    });
+                } else {
+                    // Fallback for browsers without Web Share API
+                    alert('Share this link: ' + generatedLink.value);
+                }
+            });
+            
+            // QR Code Button Click Handler
+            qrCodeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('QR code generation would appear here in a real implementation.');
+                // In production, use a library like QRCode.js
+            });
+            
+            // Analytics Button Click Handler
+            analyticsBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Link analytics dashboard would open here.');
+            });
+        });
+    </script>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Viral Link Generator",
+        "url": "https://yourwebsite.com/generator",
+        "description": "Create short, trackable links that boost your click-through rates",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Viral Link"
+        }
+    }
+    </script>
+</body>
+</html>
