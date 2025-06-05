@@ -288,14 +288,35 @@
     
     <!-- CTA Section (Get Started) -->
     <section id="get-started" class="py-5 text-center">
-        <div class="container">
-            <h2 class="mb-4">Ready to Boost Your Clicks?</h2>
-            <p class="lead mb-4">Join thousands of marketers using Viral Link to maximize their reach.</p>
-           <a href="https://vitechlink.github.io/link/viral-link.html">
-    <button id="generateLinkBtn" class="btn btn-primary btn-lg px-4 py-2">
-        <i class="fas fa-link me-2"></i> Get Your Link Now
+  <div class="container">
+    <h2 class="mb-4">Ready to Boost Your Clicks?</h2>
+    <p class="lead mb-4">Join thousands of marketers using Viral Link to maximize their reach.</p>
+
+    <button id="generateLinkBtn" class="btn btn-primary btn-lg px-4 py-2" onclick="startTimer()">
+      Click Here
     </button>
-</a>
+  </div>
+</section>
+
+<script>
+  function startTimer() {
+    const button = document.getElementById("generateLinkBtn");
+    button.disabled = true;
+    let timeLeft = 10;
+
+    const countdown = setInterval(() => {
+      button.innerText = `Please wait ${timeLeft--}s`;
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        button.disabled = false;
+        button.innerText = "Get Your Link Now";
+        button.onclick = () => {
+          window.location.href = "https://vitechlink.github.io/link/viral-link.html";
+        };
+      }
+    }, 1000);
+  }
+</script>
     
     <!-- Bottom Ad Banner -->
     <div class="container mb-5">
